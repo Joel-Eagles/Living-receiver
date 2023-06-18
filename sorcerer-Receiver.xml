@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Living receiver</name>
+        <description>5e homebrew</description>
+        <author url="">D&amp;D Wiki</author>
+        <update version="1.0">
+            <file name="sorcerer-Receiver.xml" url="" />
+        </update>
+    </info>
+
+	<element name="Living Receiver" type="Archetype" source="Homebrew" id="Living_Receiver_homebrew">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<p>When events are set in motion that can disrupt the Multiverse, a Diety of Fate or Time, can create a champion to prevent such calamity. No one knows how or why a Receiver will be chosen, but the Receiver must be a mortal creature. The Living Receiver is blessed with Tangential Powers. These include increased strength and martial knowledge, telekinesis, mind control, and the ability to conjure fire and water. The wellspring of Tangential Powers, granted by a Diety of Fate or Time, lie adjacent to the Entropic Energy that seeks to ensure the calamity event. The Living Receiver can access this Entropic Energy to bolster their abilities, but are often tormented by terrifying dreams, visions, and auditory hallucinations, when they do. As the Living Receiver grows more powerful, they can begin to weave the Entropic Energy with their Tangential Powers to manipulate those around them. Those affected are known as the Manipulated and will fear and try to destroy them.</p>
+			<div element="ID_TangentialMagic" />
+			<div element="ID_ChampionResilience" />
+			<div element="ID_MartialKnowledge" />
+			<div element="ID_ExtraAttack" />
+			<div element="ID_EntropicRestoration" />
+			<div element="ID_ImprovedMartialKnowledge" />
+			<div element="ID_ManipulatedViolence" />
+			<div element="ID_ReceiversAscension" />
+			
+			<h5 class="caption">Entropic Restoration</h5>
+			<table>
+				<thead>
+					<tr><td>d100</td><td>Effect (Lasts 1d8 hours)</td></tr>
+				</thead>
+				<tr><td>01-05</td><td>The character suffers from partial amnesia. The character knows who they are and retains racial, background, and class features, but doesn't recognize other people or remember anything that happened before the madness took effect.</td></tr>
+				<tr><td>06-11</td><td>The character does whatever anyone tells them to do that isn't obviously self-destructive. The character suffers the Charmed condition for the duration and has disadvantage on Wisdom and Charisma Saving Throws.</td></tr>
+				<tr><td>12-18</td><td>The character experiences an overpowering urge to eat something strange such as dirt, slime, or offal. The character must succeed on a DC 15 Constitution Saving Throw or suffer the Poisoned condition for the duration.</td></tr>
+				<tr><td>19-26</td><td>The character suffers extreme paranoia. the character has disadvantage on Wisdom (Insight) checks and advantage on Wisdom and Charisma Saving Throws</td></tr>
+				<tr><td>27-35</td><td>The character experiences narcissistic notions. They have advantage on Charisma Ability checks and Charisma Saving Throws.</td></tr>
+				<tr><td>36-55</td><td>The character experienced vivid hallucinations and has disadvantage on Ability Checks.</td></tr>
+				<tr><td>56-65</td><td>The character becomes manic. For the duration of the madness, they can ignore all effects caused by exhaustion.</td></tr>
+				<tr><td>66-74</td><td>The character experiences uncontrollable tremors or tics, which impose disadvantage on Attack rolls, Ability Checks, and Saving Throws that involve Strength or Dexterity.</td></tr>
+				<tr><td>75-82</td><td>The character experiences delusions of grandeur. They have advantage on Strength, Dexterity, Wisdom and Charisma Ability Checks.</td></tr>
+				<tr><td>83-89</td><td>The character feels compelled to repeat a specific activity over and over, such as washing hands, touching things, praying, or counting coins. The character is considered Incapacitated for all activities that do not support the chosen compelled behavior</td></tr>
+				<tr><td>90-95</td><td>The character is Blinded (25%) or Deafened (75%).</td></tr>
+				<tr><td>96-00</td><td>The character begins babbling and is incapable of normal speech or spellcasting.</td></tr>
+			</table>
+			
+			<h5 class="caption">Tangential Magic</h5>
+			<table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1</td><td>Jump, Longstrider</td></tr>
+				<tr><td>3</td><td>Pyrotechnics, Suggestion</td></tr>
+				<tr><td>5</td><td>Fire Ball, Tidal Wave</td></tr>
+				<tr><td>7</td><td>Otiluke's Resilient Sphere, Control Water</td></tr>
+				<tr><td>9</td><td>Telekinesis, Geas</td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>Your innate magic comes from the wild forces of chaos that underlie the order of creation.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_TangentialMagic" level="1" />
+			<grant type="Archetype Feature" id="ID_ChampionResilience" level="1" />
+			<grant type="Archetype Feature" id="ID_MartialKnowledge" level="1" />
+			<grant type="Archetype Feature" id="ID_ExtraAttack" level="6" />
+			<grant type="Archetype Feature" id="ID_EntropicRestoration" level="6" />
+			<grant type="Archetype Feature" id="ID_ImprovedMartialKnowledge" level="14" />
+			<grant type="Archetype Feature" id="ID_ManipulatedViolence" level="14" />
+			<grant type="Archetype Feature" id="ID_ReceiversAscension" level="18" />
+			
+		</rules>
+	</element>
+	<element name="Tangential Magic" type="Archetype Feature" source="Homebrew" id="ID_TangentialMagic">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_WILD_MAGIC_SURGE</requirements>
+		<supports>Tangential Magic</supports>
+		<description>
+			<p> Starting at 1st level, you learn additional spells when you reach certain levels in this class, as shown on the Receiver Magic table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.</p>
+		</description>
+		<sheet>
+			<description>you learn additional spells when you reach certain levels in this class, as shown on the Receiver Magic table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.</description>
+		</sheet>
+		<rules>
+		<select type="Spell" name="Jump (Tangential Magic)" supports="Sorcerer" level="1" number="1" optional="false" spellcasting="Sorcerer" />
+		<select type="Spell" name="Longstrider (Tangential Magic)" supports="Wizard" level="1" number="1" optional="false" spellcasting="Wizard" />
+		<select type="Spell" name="Pyrotechnics (Tangential Magic)" supports="Sorcerer" level="3" number="1" optional="false" spellcasting="Sorcerer" />
+		<select type="Spell" name="Suggestion (Tangential Magic)" supports="Sorcerer" level="3" number="1" optional="false" spellcasting="Sorcerer" />
+		<select type="Spell" name="Fire Ball (Tangential Magic)" supports="Sorcerer" level="5" number="1" optional="false" spellcasting="Sorcerer" />
+		<select type="Spell" name="Tidal Wave (Tangential Magic)" supports="Wizard" level="5" number="1" optional="false" spellcasting="Wizard" />
+		<select type="Spell" name="Otiluke's Resilient Sphere (Tangential Magic)" supports="Wizard" level="7" number="1" optional="false" spellcasting="Wizard" />
+		<select type="Spell" name="Control Water (Tangential Magic)" supports="Wizard" level="7" number="1" optional="false" spellcasting="Wizard" />
+		<select type="Spell" name="Telekinesis (Tangential Magic)" supports="Sorcerer" level="9" number="1" optional="false" spellcasting="Sorcerer" />
+		<select type="Spell" name="Geas (Tangential Magic)" supports="Wizard" level="9" number="1" optional="false" spellcasting="Wizard" />
+		</rules>
+	</element>
+	<element name="Champion Resilience" type="Archetype Feature" source="Homebrew" id="ID_ChampionResilience">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_TIDES_OF_CHAOS</requirements>
+		<supports>Tangential Magic</supports>
+		<description>
+			<p> Your body is infused with divine resilience. At 1st level, your hit point maximum increases by 1, and it increases by 1 again whenever you gain a level in this class.</p>
+		</description>
+		<sheet display="false">
+			<description>At 1st level, your hit point maximum increases by 1, and it increases by 1 again whenever you gain a level in this class.</description>
+		</sheet>
+		
+		<rules>
+			<stat name="hp" value="1" level="1"/>
+			<stat name="hp" value="1" level="2"/>
+			<stat name="hp" value="1" level="3"/>
+			<stat name="hp" value="1" level="4"/>
+			<stat name="hp" value="1" level="5"/>
+			<stat name="hp" value="1" level="6"/>
+			<stat name="hp" value="1" level="7"/>
+			<stat name="hp" value="1" level="8"/>
+			<stat name="hp" value="1" level="9"/>
+			<stat name="hp" value="1" level="10"/>
+			<stat name="hp" value="1" level="11"/>
+			<stat name="hp" value="1" level="12"/>
+			<stat name="hp" value="1" level="13"/>
+			<stat name="hp" value="1" level="14"/>
+			<stat name="hp" value="1" level="15"/>
+			<stat name="hp" value="1" level="16"/>
+			<stat name="hp" value="1" level="17"/>
+			<stat name="hp" value="1" level="18"/>
+			<stat name="hp" value="1" level="19"/>
+			<stat name="hp" value="1" level="20"/>
+		</rules>
+		
+	</element>
+	<element name="Martial Knowledge" type="Archetype Feature" source="Homebrew" id="ID_MartialKnowledge">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_BEND_LUCK</requirements>
+		<supports>Tangential Magic</supports>
+		<description level="1">
+			<p>you gain proficiency with light armor, medium armor, shields, and simple weapons.</p>
+		</description>
+		<sheet display="false">
+			<description>At 1st level you gain proficiency with light armor, medium armor, shields, and simple weapons</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+		</rules>
+	</element>
+	<element name="Entropic Restoration" type="Archetype Feature" source="Homebrew" id="ID_EntropicRestoration">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_SPELL_BOMBARDMENT</requirements>
+		<supports>Tangential Magic</supports>
+		<description level="6">
+			<p>Once per long rest, as an action, you can open yourself to the well of Entropic power to replenish exhausted Sorcerer Points equal to your Proficiency Bonus. Immediately after using this feature, roll on the Tangential Madness table.</p>
+			
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>as an action, you can open yourself to the well of Entropic power to replenish exhausted Sorcerer Points equal to your Proficiency Bonus. Immediately after using this feature, roll on the Tangential Madness table.</description>
+		</sheet>
+	</element>
+		<element name="Extra Attack" type="Archetype Feature" source="Homebrew" id="ID_ExtraAttack">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_CONTROLLED_CHAOS</requirements>
+		<supports>Tangential Magic</supports>
+		<description level="6">
+			<p>. Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. Moreover, you can cast one of you cantrips in place of one of those attacks.</p>
+		</description>
+		<sheet>
+			<description>you can attack twice, instead of once, whenever you take the Attack action on your turn. Moreover, you can cast one of you cantrips in place of one of those attacks.</description>
+		</sheet>
+	</element>	
+	<element name="Improved Martial Knowledge" type="Archetype Feature" source="Homebrew" id="ID_ImprovedMartialKnowledge">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_SPELL_BOMBARDMENT</requirements>
+		<supports>Tangential Magic</supports>
+		<description>
+			<p>At 14th level, you gain proficiency with heavy armor and martial weapons.</p>
+		</description>
+		<sheet display="false">
+			<description>At 14th level, you gain proficiency with heavy armor and martial weapons.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+		</rules>
+	</element>
+	<element name="Manipulated Violence" type="Archetype Feature" source="Homebrew" id="ID_ManipulatedViolence">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_SPELL_BOMBARDMENT</requirements>
+		<supports>Tangential Magic</supports>
+		<description level="14">
+			<p>. At 14th level, once per long rest, as a bonus action, you awaken a sense of fear and rage within the creatures around you. Each creature of your choice that you can see within 30 feet of you, must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened of you and drawn to you for 1 minute. This effect is as if you were concentrating on a spell. For the duration, the target has disadvantage on ability checks and attack rolls while you are within line of sight. The target must make a Wisdom saving throw each time it attempts to move to a space that is more than 30 feet away from you. If it succeeds on this saving throw, the target's movement isn't restricted for that turn. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw at the end of their turn to end the effect. Once you use this bonus action, you can't use it again until you finish a long rest, unless you can spend 5 sorcery points to use this feature again.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>you awaken a sense of fear and rage within the creatures around you. Each creature of your choice that you can see within 30 feet of you, must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened of you and drawn to you for 1 minute. This effect is as if you were concentrating on a spell. For the duration, the target has disadvantage on ability checks and attack rolls while you are within line of sight. The target must make a Wisdom saving throw each time it attempts to move to a space that is more than 30 feet away from you. If it succeeds on this saving throw, the target's movement isn't restricted for that turn. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw at the end of their turn to end the effect. Once you use this bonus action, you can't use it again until you finish a long rest, unless you can spend 5 sorcery points to use this feature again.</description>
+		</sheet>
+	</element>
+	<element name="Receivers Ascension" type="Archetype Feature" source="Homebrew" id="ID_ReceiversAscension">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_SPELL_BOMBARDMENT</requirements>
+		<supports>Tangential Magic</supports>
+		<description level="18">
+			<p>. At 18th level, your Tangential Powers reach their zenith. Your Strength and Constitution score increases by 2, up to a maximum of 22.</p>
+		</description>
+		<sheet display="false">
+			<description>At 18th level, your Tangential Powers reach their zenith. Your Strength and Constitution score increases by 2, up to a maximum of 22.</description>
+		</sheet>
+		<rules>
+			<stat name="strength" value="2" />
+			<stat name="constitution" value="2" />
+		</rules>
+	</element>
+	
+	<!--Feature Replacement Grants-->
+	<element name="HERE Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_WILD_MAGIC_SURGE" />
+	<element name="Tides of Chaos Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_TIDES_OF_CHAOS" />
+	<element name="Bend Luck Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_BEND_LUCK" />
+	<element name="Controlled Chaos Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_CONTROLLED_CHAOS" />
+	<element name="Spell Bombardment Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_SORCERER_WILD_SPELL_BOMBARDMENT" />
+	
+	
+</elements>
